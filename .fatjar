@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Mon Jan 29 16:41:12 CST 2018
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=C\:\\Users\\Administrator\\Desktop\\tcp_tuxedo-tools.jar
+manifest.mergeall=true
+manifest.mainclass=com.xt.message.Main
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=<inc|tcp_tuxedo/imgs>
