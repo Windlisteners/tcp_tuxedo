@@ -1,5 +1,5 @@
 #Fat Jar Configuration File
-#Mon Jan 29 16:41:12 CST 2018
+#Tue Jan 30 18:16:48 CST 2018
 onejar.license.required=false
 manifest.classpath=
 manifest.removesigners=true
@@ -11,4 +11,4 @@ manifest.file=<createnew>
 jarname.isextern=true
 onejar.expand=
 excludes=
-includes=<inc|tcp_tuxedo/imgs>
+includes=

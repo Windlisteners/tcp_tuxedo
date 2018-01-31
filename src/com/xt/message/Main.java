@@ -40,6 +40,7 @@ import com.xt.message.vo.ParamVO;
 public class Main extends JFrame implements WindowListener{
 
 	private static final long serialVersionUID = 3832422801288560154L;
+	
 	final static String TCP = "TCP";
 	final static String TUXEDO = "TUXEDO";
 	final static String UTF_8 = "UTF-8";
@@ -68,13 +69,15 @@ public class Main extends JFrame implements WindowListener{
 	    try {
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+//			e.printStackTrace();
+			t8.setText(e.toString());
 		}
 	    
 		f.setTitle("Java Tuxdeo And Tcp 测试工具");	// 将此窗体的标题设置为指定的字符串
 		f.setResizable(false);	// 设置此窗体是否可由用户调整大小
 		f.setSize(1702, 1000);	// 调整组件的大小，使其宽度为 1700，高度为 1000
+//		f.setIconImage(new ImageIcon("imgs/title.png").getImage());
+		f.setIconImage(new ImageIcon(getClass().getResource("/imgs/title.png")).getImage());
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	// 设置默认退出程序
 		
 		p1 = new JPanel() {
@@ -84,15 +87,15 @@ public class Main extends JFrame implements WindowListener{
 			@Override
 			protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
-				ImageIcon ii = new ImageIcon("imgs/home.jpg");
-//				ImageIcon ii = new ImageIcon(getClass().getResource("/imgs/home.jpg"));
+//				ImageIcon ii = new ImageIcon("imgs/home.jpg");
+				ImageIcon ii = new ImageIcon(getClass().getResource("/imgs/home.jpg"));
 				g.drawImage(ii.getImage(), 0, 0, getWidth(), getHeight(), ii.getImageObserver());
 			}
 			
 		};
 		p1.setSize(1700, 1000);
 		p1.setLayout(null);
-		p1.setBorder(BorderFactory.createLoweredBevelBorder());
+		p1.setBorder(BorderFactory.createLineBorder(Color.GRAY));
 		
 		UIManager.put("Label.font", new FontUIResource("华文行楷", Font.PLAIN, 27));
 		UIManager.put("Label.foreground", Color.BLACK);
@@ -166,11 +169,11 @@ public class Main extends JFrame implements WindowListener{
 		s2.setViewportView(t8);
 		
 		JButton b1 = new JButton("发送");
-		b1.setBounds(1480, 40, 100, 40);
+		b1.setBounds(1480, 35, 100, 50);
 		b1.addActionListener(new b1Listen());
 		
 		JButton b2 = new JButton("关闭");
-		b2.setBounds(1480, 100, 100, 40);
+		b2.setBounds(1480, 95, 100, 50);
 		b2.addActionListener(new b2Listen());
 
 		p1.add(l1);
